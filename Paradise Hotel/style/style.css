@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0; font-size: 100%; box-sizing: border-box; font-family: 'Open Sans', sans-serif;}
+nav,ul{list-style: none;}
+a{text-decoration: none; cursor: pointer; opacity: 0.9;}
+a:hover{opacity: 1;}
+
+/* HEADER */
+
+header{
+    width: 100%; position: absolute; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background-color: #fff;
+}
+header img{width: 200px;}
+header nav{display: flex;}
+header li a{color: #191c03;}
+header li{margin: 0 15px;}
+header li:first-child{margin-left: 0;}
+header li:last-child{margin-right: 0;}
+
+@media (max-width: 700px) {
+    header{flex-direction: column;}
+    header img{margin: 15px;}
+    
+}
+
+/* HERO */
+
+.hero{background-image: url('../Images/hero.jpg'); background-size: cover; min-height: 100vh;color: white; display: flex; justify-content: center; align-items: center; flex-direction: column;text-align: center;}
+
+.hero h1{font-size: 3.2rem; margin-bottom: 15px;}
+.hero h2{font-size: 2rem; margin-bottom: 15px;}
+.hero .btn{background-color: white; border-radius: 4px; color: #191c03; padding: 20px 50px; text-transform: uppercase;}
+
+@media (max-width:700px){
+    .hero h1{font-size: 2.5rem;}
+    .hero h2{font-size: 1.5rem;}
+}
+
+/* MEET THE HOTEL */
+
+.meethotel{display: flex; flex-direction: column; align-items: center; padding: 100px 50px;}
+.meethotel h1{font-size: 2rem; margin-bottom: 35px;color: #191c03;}
+.meethotel p{max-width: 800px; margin-bottom: 35px;color: #191c03; text-align: center;}
+.meethotel hr{width: 200px; height: 2px; background-color: #191c03; border: none;}
+
+.meethotel .grid{width: 100%; display: flex; flex-wrap: wrap;}
+.meethotel .grid li{height: 350px; padding: 20px; border-radius: 4px; background-clip: content-box; background-size: cover; background-position: center;}
+.meethotel .grid li.small{flex-basis: 40%;}
+.meethotel .grid li.large{flex-basis: 60%;}
+
+@media (max-width:700px){
+    .meethotel .grid li.small, .meethotel .grid li.large{flex-basis: 100%;}
+}
+
+/* CARACTERISTCS */
+
+.carac{display: flex; flex-direction: column; align-items: center; padding: 100px 50px; background-color: #191c03; }
+.carac h1{text-align: center;font-size: 2rem; margin-bottom: 35px;color: #ffffff;}
+.carac p{max-width: 800px; margin-bottom: 35px;color: #ffffff; text-align: center;}
+.carac hr{width: 200px; height: 2px; background-color: #ffffff; border: none; margin-bottom: 70px;}
+
+.carac .grid{width: 100%; display: flex;}
+.carac .grid li{padding: 0 30px; text-align: center;}
+.carac .grid li i{color: #c3c63b; font-size: 50px; margin-bottom: 30px;}
+.carac .grid li h2{font-size: 1.5rem; color: #c3c63b; margin-bottom: 30px;}
+.carac .grid li p{color: white;}
+
+@media (max-width:600px){
+    .carac .grid li.small, .carac .grid li.large{flex-direction: column;}
+}
